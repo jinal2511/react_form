@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from '../features/userSlice';
 import "./logout.css";
 
 const Logout = () => {
 
-    const user = useSelector(selectUser); 
+    const user = useSelector(selectUser);
+    const demo = useSelector(state => state)
     const dispatch = useDispatch();
-    const handleLogout= (e) => {
+    const handleLogout = (e) => {
         e.preventDefault();
 
-        
+
         dispatch(logout());
     }
-    
 
+    useEffect(() => {
+        console.log("hello Demo", demo);
+    }, [])
     return (
         <div className='logout'>
             <h1>welcome <span className='user__name'> {user.name}</span></h1><br />
