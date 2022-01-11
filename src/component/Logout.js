@@ -6,18 +6,12 @@ import "./logout.css";
 const Logout = () => {
 
     const user = useSelector(selectUser);
-    const demo = useSelector(state => state)
+
     const dispatch = useDispatch();
     const handleLogout = (e) => {
         e.preventDefault();
-
-
         dispatch(logout());
     }
-
-    useEffect(() => {
-        console.log("hello Demo", demo);
-    }, [])
     return (
         <div className='logout'>
             <h1>welcome <span className='user__name'> {user.name}</span></h1><br />

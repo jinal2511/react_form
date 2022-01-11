@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 .login__form> h1 {
-    font-style: 35px;
+    font-size: 35px;
     margin-bottom: 15px;
     padding-bottom: 10px;
     letter-spacing: -1px;
@@ -29,7 +29,7 @@
     border: 1px solid rgba (0,0,0,0.24);
     font-family: "Inter";
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 25px;
 }
 .submit_btn{
     padding: 17px 30px;
